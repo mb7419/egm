@@ -21,3 +21,14 @@ Usage in a Jupyter Notebook
 ----------------------------
 
 View a working example [here](https://www.kaggle.com/uplytics/evidence-gap-map-for-risk-areas)
+
+**Modes**
+----------------------------
+There are two modes supported. In the random mode is more user friendly and points are scattered randomly (evenly) in a bin. 
+![Random Mode](./egm.png?raw=true "Random Mode")
+
+In the NLP mode the x and y coordinates provided are transformed into the bin so that they distribution indicates similarity and disimilarity.
+![NLP Mode](./egm.gif?raw=true "NLP Mode")
+
+
+
