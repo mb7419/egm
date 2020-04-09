@@ -24,11 +24,9 @@ There are two modes supported. Time can be included in both modes for a dynamic 
 
 The random mode is more display friendly and the plot in a bin is scattered evenly.  
 
-figure = **evidencegapmap**(dataset=pd, x_column='x', y_column='y',
+*figure = **evidencegapmap**(dataset=pd, x_column='x', y_column='y',
   bubble_column='title_column',bubble_text='bubbletext_column', bubble_link='bubblelink_column', size_column='size_column', color_column='color_column',xbin_list=<list1>, ybin_list = <list2>,
-  xbin_size=100, ybin_size = 100, x_title="X Axis Title", y_title="Y Axis Title", title='Evidence Gap Map for XYZ',scale_bubble=4, marker_opacity=0.8,height=900, width=1200)
-
-*iplot(figure)*
+  xbin_size=100, ybin_size = 100, x_title="X Axis Title", y_title="Y Axis Title", title='Evidence Gap Map for XYZ',scale_bubble=4, marker_opacity=0.8,height=900, width=1200)*
   
 ![Random Mode](./egm.png?raw=true "Random Mode")
  
@@ -41,7 +39,6 @@ For the NLP mode, x and y coordinates are provided arrays and are transformed an
   bubble_column='title_column',bubble_text='bubbletext_column', bubble_link='bubblelink_column', time_column='publish_year', size_column='size_column', color_column='color_column',xbin_list=<list1>, ybin_list = <list2>,
   xbin_size=100, ybin_size = 100, x_title="X Axis Title", y_title="Y Axis Title", title='Evidence Gap Map for XYZ',scale_bubble=4, marker_opacity=0.8,height=900, width=1200)*
   
- *iplot(figure)*
 
 ![NLP Mode](./egm.gif?raw=true "NLP Mode")
 
