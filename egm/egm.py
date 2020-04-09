@@ -390,7 +390,7 @@ def set_range(values, size):
 # To be used later when individual Risk Factos can be plotted
 def return_xbin_cords(x_binnum, sizebin):
     # generate some random integers to fit in the research papers in a cell
-    values = randint((-sizebin/2+5),(sizebin/2-5))
+    values = random.randint((-sizebin/2+5),(sizebin/2-5))
     #Plots start at (0, 0)
     xbin_cords = sizebin/2 + (x_binnum*sizebin) + values
     return int(xbin_cords)
@@ -398,7 +398,7 @@ def return_xbin_cords(x_binnum, sizebin):
 # To be used later when individual Risk Factos can be plotted
 def return_ybin_cords(y_binnum, sizebin):
     # generate some random integers to fit in the research papers in a cell
-    values = randint((-sizebin/2+5),sizebin/2-5)
+    values = random.randint((-sizebin/2+5),sizebin/2-5)
     #Plots start at (0, 0)
     ybin_cords = sizebin/2 + (y_binnum*sizebin) + values
     return int(ybin_cords)
