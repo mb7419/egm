@@ -7,7 +7,7 @@ In general egm package can be useful in making a plot where two catagorical vari
 
 Dependencies
 ------------
-* Python 3.7+
+* Python 3.4+
 * numpy
 * pandas 
 * plotly
@@ -22,25 +22,36 @@ Usage in a Jupyter Notebook
 
 **Modes**
 ----------------------------
-There are two modes supported. In the random mode is more user friendly and points are scattered randomly (evenly) in a bin. 
+**1** There are two modes supported. Time can be included in both modes for a dynamic year wise plot. The random mode is more display friendly and the plot in a bin is scattered evenly. 
 
 
-*Mode Random*
-figure = evidencegapmap(dataset=pd, x_column='x', y_column='y',
+**Mode Random**
+from __future__ import division
+from plotly.offline import init_notebook_mode, iplot
+init_notebook_mode()
+figure = **evidencegapmap**(dataset=pd, x_column='x', y_column='y',
   bubble_column='title_column',bubble_text='bubbletext_column', bubble_link='bubblelink_column', size_column='size_column', color_column='color_column',xbin_list=<list1>, ybin_list = <list2>,
   xbin_size=100, ybin_size = 100, x_title="X Axis Title", y_title="Y Axis Title", title='Evidence Gap Map for XYZ',scale_bubble=4, marker_opacity=0.8,height=900, width=1200)
+
 iplot(figure)
   
-![Random Mode](./egm.png?raw=true "Random Mode"). Time can be included in both modes for a dynamic year wise plot.
+![Random Mode](./egm.png?raw=true "Random Mode")
   
-In the NLP mode the x and y coordinates provided are transformed into the bin so that they distribution indicates similarity and disimilarity.
+**2** The NLP mode, x and y coordinates are provided and are transformed and plotted in the bin. The mode is useful for displaying the similarity and disimilarity of points
  
- *NLP Mode*
- figure = evidencegapmap(dataset=pd, x_column='x', y_column='y',xy_column='xy_column',
+ **NLP Mode**
+ 
+from __future__ import division
+from plotly.offline import init_notebook_mode, iplot
+init_notebook_mode()
+ figure = **evidencegapmap**(dataset=pd, x_column='x', y_column='y',xy_column='xy_column',
   bubble_column='title_column',bubble_text='bubbletext_column', bubble_link='bubblelink_column', time_column='publish_year', size_column='size_column', color_column='color_column',xbin_list=<list1>, ybin_list = <list2>,
   xbin_size=100, ybin_size = 100, x_title="X Axis Title", y_title="Y Axis Title", title='Evidence Gap Map for XYZ',scale_bubble=4, marker_opacity=0.8,height=900, width=1200)
+  
+ iplot(figure)
 
 ![NLP Mode](./egm.gif?raw=true "NLP Mode")
+
 
 View a working example [here](https://www.kaggle.com/uplytics/evidence-gap-map-for-risk-areas)
 
