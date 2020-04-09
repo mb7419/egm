@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import random
 
 def evidencegapmap(dataset, x_column, y_column, xy_column=None, bubble_column=None, bubble_text=None, bubble_link=None, time_column=None, size_column=None, color_column=None,   
                xbin_list=None, ybin_list=None,xbin_size=100, ybin_size=100, x_title=None, y_title=None, title=None, colorbar_title=None,
