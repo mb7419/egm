@@ -1,5 +1,5 @@
+import numpy as np
 import pandas as pd
-import numpy as np 
 
 def evidencegapmap(dataset, x_column, y_column, xy_column=None, bubble_column=None, bubble_text=None, bubble_link=None, time_column=None, size_column=None, color_column=None,   
                xbin_list=None, ybin_list=None,xbin_size=100, ybin_size=100, x_title=None, y_title=None, title=None, colorbar_title=None,
@@ -219,9 +219,7 @@ def draw_evidence_gap_map_structure_ver(linenum=1, x_list=None, y_list=None,xbin
     return draw_verticals
     
 def make_grid_with_categories(dataset, column_names, time_column, category_column, years=None, categories=None):
-    '''Makes the grid for the plot as a pandas DataFrame by-passing the use of plotly.grid_objs
-    that is unavailable in the offline mode for plotly. The grids are designed using the `col_name_template`
-    from the `column_names` of the `dataset` using the `category_column` for catergories.'''
+    '''Makes the grid for the plot as a pandas DataFrame.'''
     
     grid = pandas.DataFrame()
     if categories is None:
